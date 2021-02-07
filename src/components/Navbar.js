@@ -97,10 +97,30 @@ export default function Navbar() {
 										<NavLink
 											exact
 											activeClassName="active"
+											to="/covid"
+											onClick={closeNav}
+										>
+											{t("NAVBAR.COVID")}
+										</NavLink>
+									</li>
+									<li>
+										<NavLink
+											exact
+											activeClassName="active"
 											to="/fair/catalog"
 											onClick={closeNav}
 										>
 											{t("NAVBAR.CATALOG")}
+										</NavLink>
+									</li>
+									<li>
+										<NavLink
+											exact
+											activeClassName="active"
+											to="/fair/competition"
+											onClick={closeNav}
+										>
+											LARV-Competition
 										</NavLink>
 									</li>
 									{showGallery && (
@@ -115,39 +135,34 @@ export default function Navbar() {
 											</NavLink>
 										</li>
 									)}
+									<NavLink
+										exact
+										activeClassName="active"
+										to="/fair/schedule"
+										onClick={closeNav}
+									>
+										{t("NAVBAR.SCHEDULE")}
+									</NavLink>
 								</ul>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div className="dropdown">
-							<NavLink
-								activeClassName="active"
-								to="/prep-week"
-								onClick={closeNav}
-							>
+							<NavLink activeClassName="active" to="/prep-week" onClick={closeNav}>
 								{/* Prep&nbsp;week */}
 								PREP-WEEK
 							</NavLink>
 						</div>
 					</li>
 					<li>
-						<NavLink
-							exact
-							activeClassName="active"
-							to="/contact"
-							onClick={closeNav}
-						>
+						<NavLink exact activeClassName="active" to="/contact" onClick={closeNav}>
 							{t("NAVBAR.CONTACT")}
 						</NavLink>
 					</li>
 					<li>
 						<div className="dropdown">
-							<NavLink
-								activeClassName="active"
-								to="/students"
-								onClick={closeNav}
-							>
+							<NavLink activeClassName="active" to="/students" onClick={closeNav}>
 								{t("NAVBAR.STUDENTS")}
 							</NavLink>
 							<div className="dropdown-content">
@@ -172,17 +187,23 @@ export default function Navbar() {
 											{t("NAVBAR.IM")}
 										</NavLink>
 									</li>
+									<li>
+										<NavLink
+											exact
+											activeClassName="active"
+											to="/students/guide"
+											onClick={closeNav}
+										>
+											{t("NAVBAR.GUIDE")}
+										</NavLink>
+									</li>
 								</ul>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div className="dropdown">
-							<NavLink
-								activeClassName="active"
-								to="/involved"
-								onClick={closeNav}
-							>
+							<NavLink activeClassName="active" to="/involved" onClick={closeNav}>
 								{t("NAVBAR.GET_INVOLVED")}
 							</NavLink>
 							<div className="dropdown-content">
